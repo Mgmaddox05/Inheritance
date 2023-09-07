@@ -1,5 +1,6 @@
 import java.util.*;
-public class App {
+public class App{
+    
     public static void main(String[] args) throws Exception {
         List<Student> stuList = new ArrayList<Student>();
        
@@ -12,10 +13,13 @@ public class App {
         stuList.add(grStu1);
         stuList.add(grStu2);
         
+        //A list is different from the contents of the list
+        // A list is a list of a data type for example students and the contents of the list is one specific instances
         for(int i =0; i <= stuList.size() - 1; i++)
         {
              System.out.println(stuList.get(i));
-            
+             System.out.println(stuList.get(i).getSerialData());
+             
         }
            
     }
