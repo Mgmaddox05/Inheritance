@@ -3,7 +3,7 @@ public class GradStudent extends Student
     private String officeNum;
     private String officeHour;
     
-
+   
 
     public GradStudent(String firstName, String lastName, String idNum, String gpa, String officeNum, String officeHour)
     {
@@ -13,9 +13,20 @@ public class GradStudent extends Student
     }
 
     @Override
+    public String getID()
+    {
+        return "GR-" + super.getID();
+    }
+
+    public String getSerialData()
+    {
+         return  getfirstName() + " , " + getlastName() + ", " + getID() + ", " + getGPA() + ", " + officeNum + ", " + officeHour;
+    }
+
+    @Override
     public String toString()
     {
-        return getfirstName() + " " + getlastName() + " ID: GR-" + getID() + " GPA: " + getGPA() +" Office Number: " + officeNum + " Office Hours: " + officeHour;
+        return getfirstName() + " " + getlastName() + " ID: " + getID() + " GPA: " + getGPA() +" Office Number: " + officeNum + " Office Hours: " + officeHour;
     }
 
     

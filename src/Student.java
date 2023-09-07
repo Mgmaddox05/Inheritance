@@ -1,8 +1,13 @@
-public class Student {
+public class Student implements Serializable {
     private String firstName;
     private String lastName;
     private String idNum;
     private String gpa;
+
+    public String getSerialData()
+    {
+         return  firstName + " , " + lastName + ", " + idNum + ", " + gpa;
+    }
 
     public Student(String firstName, String lastName, String idNum, String gpa)
     {
